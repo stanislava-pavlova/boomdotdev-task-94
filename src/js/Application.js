@@ -1,16 +1,16 @@
-import EventEmitter from 'eventemitter3';
+import EventEmitter from "eventemitter3";
 
 export default class Application extends EventEmitter {
   static get events() {
     return {
-      READY: 'ready',
+      READY: "ready",
     };
   }
 
   constructor() {
     super();
     this.emojis = [];
-    this.banana = '🍌';
+    this.banana = "🍌";
     this.emit(Application.events.READY);
   }
   setEmojis(emojis) {
